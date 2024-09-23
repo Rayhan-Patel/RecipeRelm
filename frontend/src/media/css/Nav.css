@@ -1,0 +1,142 @@
+/* General container styles */
+body{
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+.container-fluid {
+    font-family: Arial, sans-serif;
+    background-color: #393f44;
+    color: #333;
+    padding: 0;
+}
+
+/* Logo and button styles */
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    height: 11vh;
+    background-color: #343a40;
+    color: #fff;
+}
+
+.logo button {
+    cursor: pointer;
+    display: none; /* Hide by default */
+    flex-direction: column;
+    align-items: center;
+    padding: 3;
+    width: 2vw;
+    background: transparent;
+}
+
+.bar {
+    width: 25px;
+    height: 2.5px;
+    background-color: #c9c6c6;
+    margin: 3px 0;
+    transition: 1s;
+    border-radius: 20px;
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#logo{
+    height: 15vh;
+}
+
+.logo img {
+    height: 30px;
+    margin-left: 0px;
+}
+
+/* Navbar styles */
+.nav-links {
+    display: flex;
+    flex-direction: row; /* Row by default for larger screens */
+}
+
+.nav-links a {
+    color: #fff;
+    align-items: center;
+    padding: 0.5rem;
+    font-size: 2rem;
+    border-bottom: 1px solid #495057;
+}
+
+.nav-links a:hover {
+    background-color: #495057;
+}
+
+.nav-links img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+#searchform input{
+    border-radius:50px;
+    font-size: 1.5rem;
+    width:30rem;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    .logo button {
+        display: flex; /* Show button in mobile mode */
+        position: absolute;
+        right: 20px;
+    }
+
+    .close .nav-links{
+        display: none;
+    }
+
+    .navbaropen .nav-links {
+        flex-direction: column; /* Column layout in mobile mode */
+        display: flex; /* Initially hidden */
+        position: fixed;
+        top: 11.3vh;
+        left: 0;
+        width: 100vw;
+        background-color: #343a40;
+        z-index: 1000;
+    }
+    
+    #searchform input{
+        right: 13vw;
+        border-radius:50px;
+        font-size: 20px;
+        width: 13rem;
+    }
+
+}
+
+@media (max-width:425px) {
+    #logo{
+        position: relative;
+        left: -30px;
+    }
+    
+    #searchform input{
+        position: fixed;
+        top: 12px;
+        right: 85px;
+        border-radius:50px;
+        font-size: 20px;
+        width: 8rem;
+    }
+
+    
+}

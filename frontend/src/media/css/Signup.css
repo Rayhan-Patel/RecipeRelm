@@ -1,0 +1,76 @@
+/* src/SignupPage.css */
+
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-size: cover;
+    animation: fadeIn 2s ease-in;
+}
+
+.error{
+    padding: 5px;
+    border-radius: 10px;
+    background-color: rgba(205, 81, 81, 0.907);
+}
+
+.signup-form {
+    height: 50vh;
+    width: 30vw;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    animation: slideIn 1s ease-in-out;
+}
+
+h2 {
+    margin: 0 0 1rem;
+    color: #333;
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #dfdbdb;
+    border-radius: 4px;
+    margin: 3px;
+}
+
+button {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1rem;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+button:hover {
+    background-color: #327835;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
