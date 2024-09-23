@@ -1,3 +1,6 @@
 
+frontend/src/Login.js
+frontend/src/Signup.js
+frontend/src/Subsciption.js
 /Main/migrations
 RecipeRelm/settings.py
